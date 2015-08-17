@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Node学习之路（登录二） | xiao的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="学习Node我的Node学习之旅
+第一个任务给前面做的登录页面增加登录、注册功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node学习之路（登录二）">
+<meta property="og:url" content="http://blog.shenxj.xyz/2015/08/17/load2/index.html">
+<meta property="og:site_name" content="xiao的博客">
+<meta property="og:description" content="学习Node我的Node学习之旅
+第一个任务给前面做的登录页面增加登录、注册功能">
+<meta property="og:image" content="https://farm1.staticflickr.com/662/20638185032_9c06168abf_z.jpg">
+<meta property="og:image" content="https://farm6.staticflickr.com/5692/20024770754_880e09804c_b.jpg">
+<meta property="og:updated_time" content="2015-08-17T07:08:34.147Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node学习之路（登录二）">
+<meta name="twitter:description" content="学习Node我的Node学习之旅
+第一个任务给前面做的登录页面增加登录、注册功能">
+  
+    <link rel="alternative" href="/atom.xml" title="xiao的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link href="//cdn.bootcss.com/outdated-browser/1.1.0/outdatedbrowser.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="outdated"></div>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/favicon.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">xiao</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/shenxj1228" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/shenxjwb" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/node-express-ejs-passport-Bootstrap-Flat-UI/" style="font-size: 20px;">node express ejs passport Bootstrap Flat-UI</a> <a href="/tags/天津-塘沽-爆炸/" style="font-size: 10px;">天津 塘沽 爆炸</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我是一只小小的枭兽</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">xiao</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/favicon.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">xiao</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/shenxj1228" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/shenxjwb" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-load2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/17/load2/" class="article-date">
+  	<time datetime="2015-08-17T01:26:36.000Z" itemprop="datePublished">2015-08-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Node学习之路（登录二）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-express-ejs-passport-Bootstrap-Flat-UI/">node express ejs passport Bootstrap Flat-UI</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="学习Node">学习Node</h1><p>我的Node学习之旅</p>
+<h2 id="第一个任务">第一个任务</h2><p>给前面做的登录页面增加登录、注册功能</p>
+ <a id="more"></a>
+<h3 id="增加cookie-session模块"><strong> 增加cookie-session模块</strong></h3><p><code>npm install cookie-session --save</code></p>
+<p>这时的package.json内容如下：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"Login"</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>": <span class="value"><span class="string">"0.0.0"</span></span>,</span><br><span class="line">  "<span class="attribute">private</span>": <span class="value"><span class="literal">true</span></span>,</span><br><span class="line">  "<span class="attribute">scripts</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">start</span>": <span class="value"><span class="string">"node ./bin/www"</span></span><br><span class="line">  </span>&#125;</span>,</span><br><span class="line">  "<span class="attribute">dependencies</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">body-parser</span>": <span class="value"><span class="string">"~1.13.2"</span></span>,</span><br><span class="line">    "<span class="attribute">cookie-parser</span>": <span class="value"><span class="string">"^1.3.5"</span></span>,</span><br><span class="line">    "<span class="attribute">cookie-session</span>": <span class="value"><span class="string">"^1.2.0"</span></span>,</span><br><span class="line">    "<span class="attribute">debug</span>": <span class="value"><span class="string">"~2.2.0"</span></span>,</span><br><span class="line">    "<span class="attribute">ejs</span>": <span class="value"><span class="string">"~2.3.3"</span></span>,</span><br><span class="line">    "<span class="attribute">ejs-mate</span>": <span class="value"><span class="string">"^2.3.0"</span></span>,</span><br><span class="line">    "<span class="attribute">express</span>": <span class="value"><span class="string">"~4.13.1"</span></span>,</span><br><span class="line">    "<span class="attribute">mongoose</span>": <span class="value"><span class="string">"^4.1.2"</span></span>,</span><br><span class="line">    "<span class="attribute">morgan</span>": <span class="value"><span class="string">"~1.6.1"</span></span>,</span><br><span class="line">    "<span class="attribute">passport</span>": <span class="value"><span class="string">"^0.2.2"</span></span>,</span><br><span class="line">    "<span class="attribute">passport-local</span>": <span class="value"><span class="string">"^1.0.0"</span></span>,</span><br><span class="line">    "<span class="attribute">passport-local-mongoose</span>": <span class="value"><span class="string">"^1.0.1"</span></span>,</span><br><span class="line">    "<span class="attribute">serve-favicon</span>": <span class="value"><span class="string">"~2.3.0"</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="定义User_module"><strong> 定义User module </strong></h3><p>在根目录下新建一个modules文件夹，然后在modules中新增一个user.js文件。<br>然后增加以下内容：<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> mongoose=<span class="keyword">require</span>(<span class="string">'mongoose'</span>),</span><br><span class="line">    Schema=mongoose<span class="built_in">.</span>Schema,</span><br><span class="line">    passportLocalMongoose=<span class="keyword">require</span>(<span class="string">'passport-local-mongoose'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">var</span> User=<span class="literal">new</span> Schema(&#123;</span><br><span class="line">    usernmae:&#123; <span class="keyword">type</span>: <span class="built_in">String</span>, unique: <span class="literal">true</span> &#125;,</span><br><span class="line">    email:&#123; <span class="keyword">type</span>: <span class="built_in">String</span>, unique: <span class="literal">true</span> &#125;</span><br><span class="line">&#125;);</span><br><span class="line">User<span class="built_in">.</span>plugin(passportLocalMongoose);</span><br><span class="line">module<span class="built_in">.</span>exports = mongoose<span class="built_in">.</span>model(<span class="string">'User'</span>, User);</span><br></pre></td></tr></table></figure></p>
+<p>其中user没有定义password，因为passport-lical-mongoose 采用salt和hex的加密方式将密码存储进User对象。</p>
+<h3 id="修改app-js"><strong> 修改app.js </strong></h3><p>主要是增加passport passport-local mongoose cookie-session的引用和调用。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="keyword">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> path = <span class="keyword">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">var</span> favicon = <span class="keyword">require</span>(<span class="string">'serve-favicon'</span>);</span><br><span class="line"><span class="keyword">var</span> logger = <span class="keyword">require</span>(<span class="string">'morgan'</span>);</span><br><span class="line"><span class="keyword">var</span> cookieParser = <span class="keyword">require</span>(<span class="string">'cookie-parser'</span>);</span><br><span class="line"><span class="keyword">var</span> session = <span class="keyword">require</span>(<span class="string">'cookie-session'</span>);</span><br><span class="line"><span class="keyword">var</span> bodyParser = <span class="keyword">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="keyword">var</span> routes = <span class="keyword">require</span>(<span class="string">'./routes/index'</span>);</span><br><span class="line"><span class="keyword">var</span> users = <span class="keyword">require</span>(<span class="string">'./routes/users'</span>);</span><br><span class="line"><span class="keyword">var</span> engine = <span class="keyword">require</span>(<span class="string">'ejs-mate'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mongoose = <span class="keyword">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="keyword">var</span> passport = <span class="keyword">require</span>(<span class="string">'passport'</span>);</span><br><span class="line"><span class="keyword">var</span> LocalStrategy = <span class="keyword">require</span>(<span class="string">'passport-local'</span>).Strategy;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.engine(<span class="string">'ejs'</span>, engine);</span><br><span class="line"><span class="comment">// view engine setup</span></span><br><span class="line">app.set(<span class="string">'views'</span>, path.join(__dirname, <span class="string">'views'</span>));</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'ejs'</span>);</span><br><span class="line"><span class="comment">// uncomment after placing your favicon in /public</span></span><br><span class="line"><span class="comment">//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));</span></span><br><span class="line">app.<span class="keyword">use</span>(logger(<span class="string">'dev'</span>));</span><br><span class="line">app.<span class="keyword">use</span>(bodyParser.json());</span><br><span class="line">app.<span class="keyword">use</span>(bodyParser.urlencoded(&#123; extended: <span class="keyword">false</span> &#125;));</span><br><span class="line">app.<span class="keyword">use</span>(cookieParser());</span><br><span class="line">app.<span class="keyword">use</span>(session(&#123; keys: [<span class="string">'cat'</span>, <span class="string">'dog'</span>]&#125;));</span><br><span class="line">app.<span class="keyword">use</span>(express.<span class="keyword">static</span>(path.join(__dirname, <span class="string">'public'</span>)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Configure passport middleware</span></span><br><span class="line">app.<span class="keyword">use</span>(passport.initialize());</span><br><span class="line">app.<span class="keyword">use</span>(passport.session());</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> User = <span class="keyword">require</span>(<span class="string">'./models/user'</span>);</span><br><span class="line">passport.<span class="keyword">use</span>(<span class="keyword">new</span> LocalStrategy(User.authenticate()));</span><br><span class="line"></span><br><span class="line">passport.serializeUser(User.serializeUser());</span><br><span class="line">passport.deserializeUser(User.deserializeUser());</span><br><span class="line"></span><br><span class="line"><span class="comment">// Connect mongoose</span></span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>, <span class="function"><span class="keyword">function</span><span class="params">(err)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    console.log(<span class="string">'Could not connect to mongodb on localhost. Ensure that you have mongodb running on localhost and mongodb accepts connections on standard ports!'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.<span class="keyword">use</span>(<span class="string">'/'</span>, routes);</span><br><span class="line">app.<span class="keyword">use</span>(<span class="string">'/users'</span>, users);</span><br><span class="line"></span><br><span class="line"><span class="comment">// catch 404 and forward to error handler</span></span><br><span class="line">app.<span class="keyword">use</span>(<span class="function"><span class="keyword">function</span><span class="params">(req, res, next)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> err = <span class="keyword">new</span> Error(<span class="string">'Not Found'</span>);</span><br><span class="line">  err.status = <span class="number">404</span>;</span><br><span class="line">  next(err);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// error handlers</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// development error handler</span></span><br><span class="line"><span class="comment">// will print stacktrace</span></span><br><span class="line"><span class="keyword">if</span> (app.get(<span class="string">'env'</span>) === <span class="string">'development'</span>) &#123;</span><br><span class="line">  app.<span class="keyword">use</span>(<span class="function"><span class="keyword">function</span><span class="params">(err, req, res, next)</span> </span>&#123;</span><br><span class="line">    res.status(err.status || <span class="number">500</span>);</span><br><span class="line">    res.render(<span class="string">'error'</span>, &#123;</span><br><span class="line">      message: err.message,</span><br><span class="line">      error: err</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// production error handler</span></span><br><span class="line"><span class="comment">// no stacktraces leaked to user</span></span><br><span class="line">app.<span class="keyword">use</span>(<span class="function"><span class="keyword">function</span><span class="params">(err, req, res, next)</span> </span>&#123;</span><br><span class="line">  res.status(err.status || <span class="number">500</span>);</span><br><span class="line">  res.render(<span class="string">'error'</span>, &#123;</span><br><span class="line">    message: err.message,</span><br><span class="line">    error: &#123;&#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">module.exports = app;</span><br><span class="line">app.listen(<span class="number">8000</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;console.log(<span class="string">'listening 8000 port'</span>)&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改routes/index-js"><strong> 修改routes/index.js </strong></h3><p>增加 login、register和logout的post 路由,修改GET路由<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"><span class="keyword">var</span> passport = <span class="built_in">require</span>(<span class="string">'passport'</span>);</span><br><span class="line"><span class="keyword">var</span> User = <span class="built_in">require</span>(<span class="string">'../models/user'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* GET home page. */</span></span><br><span class="line">router.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">'index'</span>, &#123; title: <span class="string">'Express'</span>,user: req.user&#125;);</span><br><span class="line">&#125;);</span><br><span class="line">router.get(<span class="string">'/login'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">'user/login'</span>, &#123; user: req.user,title:<span class="string">'登录'</span> &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/login'</span>, passport.authenticate(<span class="string">'local'</span>), <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'user: '</span>+req.body.username+<span class="string">' logined!'</span>)</span><br><span class="line">  res.redirect(<span class="string">'/'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">router.get(<span class="string">'/register'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">'user/register'</span>, &#123; title: <span class="string">'注册'</span> &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/register'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'registering user'</span>);</span><br><span class="line">  User.register(<span class="keyword">new</span> User(&#123; username: req.body.username,email:req.body.email&#125;), req.body.password, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123; <span class="built_in">console</span>.log(<span class="string">'error while user register!'</span>, err); <span class="keyword">return</span> next(err); &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'user registered!'</span>);</span><br><span class="line">    res.redirect(<span class="string">'/'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/logout'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  req.logout();</span><br><span class="line">  res.redirect(<span class="string">'/'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改view下母版页boilerplate_和index-ejs"><strong> 修改view下母版页boilerplate 和index.ejs</strong></h3><p>修改登录之后显示的内容<br>boilerplate.ejs<br><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span></span>&lt;%=<span class="ruby"> title </span>%&gt;<span class="xml"><span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"//cdn.bootcss.com/flat-ui/2.2.2/css/vendor/bootstrap.min.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"//cdn.bootcss.com/flat-ui/2.2.2/css/flat-ui.min.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//cdn.bootcss.com/flat-ui/2.2.2/js/vendor/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"navbar navbar-inverse navbar-embossed"</span> <span class="attribute">role</span>=<span class="value">"navigation"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"navbar-header"</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"navbar-brand"</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Login Demo<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"collapse navbar-collapse"</span> <span class="attribute">id</span>=<span class="value">"navbar-collapse-01"</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"nav navbar-nav navbar-right"</span>&gt;</span></span><br><span class="line">                </span>&lt;%<span class="ruby"> <span class="keyword">if</span> (typeof(user)==<span class="string">'undefined'</span>)&#123; </span>%&gt;<span class="xml"></span><br><span class="line">                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/login"</span>&gt;</span>Sign In<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/register"</span>&gt;</span>Sign Up<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">                </span>&lt;%<span class="ruby"> &#125;<span class="keyword">else</span>&#123; </span>%&gt;<span class="xml"></span><br><span class="line">                <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"/logout"</span>&gt;</span>Log Out<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">                </span>&lt;%<span class="ruby"> &#125; </span>%&gt;<span class="xml"></span><br><span class="line">               <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="title">div</span>&gt;</span><span class="comment">&lt;!-- /.navbar-collapse --&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="title">nav</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">section</span>&gt;</span></span><br><span class="line">      </span>&lt;%-<span class="ruby"> body </span>-%&gt;<span class="xml"></span><br><span class="line">    <span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">footer</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//cdn.bootcss.com/flat-ui/2.2.2/js/flat-ui.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">footer</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>index.ejs<br><figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span>&lt;%<span class="ruby"> layout(<span class="string">'boilerplate'</span>) </span>-%&gt;<span class="xml"></span><br><span class="line"></span>&lt;%<span class="ruby"> <span class="keyword">if</span> (typeof(user)!=<span class="string">'undefined'</span>)&#123; </span>%&gt;<span class="xml"></span><br><span class="line">  <span class="tag">&lt;<span class="title">h3</span>&gt;</span>欢迎您：</span>&lt;%=<span class="ruby"> user.username </span>%&gt;<span class="xml"><span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">  </span>&lt;%<span class="ruby"> &#125;<span class="keyword">else</span>&#123; </span>%&gt;<span class="xml"></span><br><span class="line">  <span class="tag">&lt;<span class="title">h3</span>&gt;</span>请先登录……<span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">  </span>&lt;%<span class="ruby"> &#125; </span>%&gt;<span class="xml"></span></span><br></pre></td></tr></table></figure></p>
+<h3 id="修改view/user下的login-ejs和register-ejs"><strong> 修改view/user下的login.ejs和register.ejs </strong></h3><p>前面写的有些地方存在问题。<br>login.ejs<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"><span class="keyword">var</span> passport = <span class="built_in">require</span>(<span class="string">'passport'</span>);</span><br><span class="line"><span class="keyword">var</span> User = <span class="built_in">require</span>(<span class="string">'../models/user'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* GET home page. */</span></span><br><span class="line">router.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">'index'</span>, &#123; title: <span class="string">'Express'</span> &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">router.get(<span class="string">'/login'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">'user/login'</span>, &#123; user: req.user,title:<span class="string">'登录'</span> &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/login'</span>, passport.authenticate(<span class="string">'local'</span>), <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.redirect(<span class="string">'/'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">router.get(<span class="string">'/register'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">'user/register'</span>, &#123; title: <span class="string">'注册'</span> &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/register'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'registering user'</span>);</span><br><span class="line">  User.register(<span class="keyword">new</span> User(&#123; username: req.body.username,email:req.body.email&#125;), req.body.password, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123; <span class="built_in">console</span>.log(<span class="string">'error while user register!'</span>, err); <span class="keyword">return</span> next(err); &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'user registered!'</span>);</span><br><span class="line">    res.redirect(<span class="string">'/'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure></p>
+<p>register.ejs<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;% layout(<span class="symbol">'boilerplat</span>e') -%&gt;</span><br><span class="line">&lt;style <span class="class"><span class="keyword">type</span>=</span><span class="string">"text/css"</span>&gt;</span><br><span class="line">.logindiv&#123;max-width:<span class="number">600</span>px;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span>=</span><span class="string">"container logindiv"</span>&gt;</span><br><span class="line">        &lt;div&gt;&lt;h3&gt;<span class="type">Sign</span> <span class="type">Up</span>&lt;/h3&gt;&lt;/div&gt;</span><br><span class="line">    &lt;form <span class="class"><span class="keyword">class</span>=</span><span class="string">"login-form"</span> method=<span class="string">"post"</span> action=<span class="string">"/register"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span>=</span><span class="string">"form-group"</span>&gt;</span><br><span class="line">              &lt;input <span class="class"><span class="keyword">type</span>=</span><span class="string">"text"</span> <span class="class"><span class="keyword">class</span>=</span><span class="string">"form-control login-field"</span> value=<span class="string">""</span> placeholder=<span class="string">"Enter your name"</span> id=<span class="string">"username"</span> name=<span class="string">"username"</span>&gt;</span><br><span class="line">              &lt;label <span class="class"><span class="keyword">class</span>=</span><span class="string">"login-field-icon fui-user"</span> <span class="keyword">for</span>=<span class="string">"username"</span>&gt;&lt;/label&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span>=</span><span class="string">"form-group"</span>&gt;</span><br><span class="line">              &lt;input <span class="class"><span class="keyword">type</span>=</span><span class="string">"password"</span> <span class="class"><span class="keyword">class</span>=</span><span class="string">"form-control login-field"</span> value=<span class="string">""</span> placeholder=<span class="string">"Password"</span> id=<span class="string">"password"</span> name=<span class="string">"password"</span>&gt;</span><br><span class="line">              &lt;label <span class="class"><span class="keyword">class</span>=</span><span class="string">"login-field-icon fui-lock"</span> <span class="keyword">for</span>=<span class="string">"password"</span>&gt;&lt;/label&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span>=</span><span class="string">"form-group"</span>&gt;</span><br><span class="line">              &lt;input <span class="class"><span class="keyword">type</span>=</span><span class="string">"email"</span> <span class="class"><span class="keyword">class</span>=</span><span class="string">"form-control login-field"</span> value=<span class="string">""</span> placeholder=<span class="string">"Email"</span> id=<span class="string">"register-email"</span> name=<span class="string">"email"</span>&gt;</span><br><span class="line">              &lt;label <span class="class"><span class="keyword">class</span>=</span><span class="string">"login-field-icon fui-mail"</span> <span class="keyword">for</span>=<span class="string">"register-email"</span>&gt;&lt;/label&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;input <span class="class"><span class="keyword">class</span>=</span><span class="string">"btn btn-primary btn-lg btn-block"</span> <span class="class"><span class="keyword">type</span>=</span><span class="string">"submit"</span> value=<span class="string">"Register"</span>&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://farm1.staticflickr.com/662/20638185032_9c06168abf_z.jpg" alt="未登录"><br><img src="https://farm6.staticflickr.com/5692/20024770754_880e09804c_b.jpg" alt="已登录"></p>
+<h2 id="完成">完成</h2><p>完成是完成了，但是存在很多问题，下次再修改。</p>
+<blockquote>
+<p>这个登录功能是仿照passport-local-mongoose的example写了一遍，主要是为了加深自己的印象。当然这个功能还是存在很多问题，比如：用户登录错误提示、注册提示、默认登录等。这就是留给自己的任务了。</p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/14/node-ready/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Node学习之路（登录一）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="load2" data-title="Node学习之路（登录二）" data-url="http://blog.shenxj.xyz/2015/08/17/load2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 xiao
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<script src="http://cdn.bootcss.com/outdated-browser/1.1.0/outdatedbrowser.min.js" type="text/javascript"></script>
+<script>
+$( document ).ready(function() {
+    outdatedBrowser({
+        bgColor: '#f25648',
+        color: '#ffffff',
+        lowerThan: 'boxShadow',
+        languagePath: '/outdatedbrowser/lang/cn.html'
+    })
+});
+</script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
