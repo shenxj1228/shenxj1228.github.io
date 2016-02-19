@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Moonkin的博客</title>
+  <title>AngularJS的ng-enter没有工作 | Moonkin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Moonkin的博客">
-<meta property="og:url" content="http://moonkin.shenxj.xyz/index.html">
+  <meta name="description" content="关于ng-animate-children使用缘由&amp;emsp;&amp;emsp;在一个页面上希望ng-repeat的内容能够在页面打开后一个个的进入（动画效果），查询了ngAnimate的文档之后，使用了.ng-enter和.ng-enter-stagger来实现效果。意外的是，页面打开时并没有任何效果……给跪！Demo： 页面打开时没有ng-enter的动画">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AngularJS的ng-enter没有工作">
+<meta property="og:url" content="http://moonkin.shenxj.xyz/2016/02/18/AngularJS的ng-enter没有工作/index.html">
 <meta property="og:site_name" content="Moonkin的博客">
-<meta property="og:description">
+<meta property="og:description" content="关于ng-animate-children使用缘由&amp;emsp;&amp;emsp;在一个页面上希望ng-repeat的内容能够在页面打开后一个个的进入（动画效果），查询了ngAnimate的文档之后，使用了.ng-enter和.ng-enter-stagger来实现效果。意外的是，页面打开时并没有任何效果……给跪！Demo： 页面打开时没有ng-enter的动画">
+<meta property="og:updated_time" content="2016-02-18T15:30:02.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Moonkin的博客">
-<meta name="twitter:description">
+<meta name="twitter:title" content="AngularJS的ng-enter没有工作">
+<meta name="twitter:description" content="关于ng-animate-children使用缘由&amp;emsp;&amp;emsp;在一个页面上希望ng-repeat的内容能够在页面打开后一个个的进入（动画效果），查询了ngAnimate的文档之后，使用了.ng-enter和.ng-enter-stagger来实现效果。意外的是，页面打开时并没有任何效果……给跪！Demo： 页面打开时没有ng-enter的动画">
   
     <link rel="alternative" href="/atom.xml" title="Moonkin的博客" type="application/atom+xml">
   
@@ -163,9 +164,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-AngularJS的ng-enter没有工作" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-AngularJS的ng-enter没有工作" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/02/18/AngularJS的ng-enter没有工作/" class="article-date">
@@ -181,38 +180,40 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/18/AngularJS的ng-enter没有工作/">AngularJS的ng-enter没有工作</a>
+    <h1 class="article-title" itemprop="name">
+      AngularJS的ng-enter没有工作
     </h1>
   
 
       </header>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="关于ng-animate-children使用"><a href="#关于ng-animate-children使用" class="headerlink" title="关于ng-animate-children使用"></a>关于ng-animate-children使用</h2><h3 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h3><p>&emsp;&emsp;在一个页面上希望ng-repeat的内容能够在页面打开后一个个的进入（动画效果），查询了ngAnimate的文档之后，使用了.ng-enter和.ng-enter-stagger来实现效果。意外的是，页面打开时并没有任何效果……给跪！<br><strong>Demo：</strong> <a href="http://runjs.cn/code/q0cbdhkf">页面打开时没有ng-enter的动画</a></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
 	</div>
 
+        
+
+        <div class="clearfix"></div>
+      </div>
       
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="关于ng-animate-children使用"><a href="#关于ng-animate-children使用" class="headerlink" title="关于ng-animate-children使用"></a>关于ng-animate-children使用</h2><h3 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h3><p>&emsp;&emsp;在一个页面上希望ng-repeat的内容能够在页面打开后一个个的进入（动画效果），查询了ngAnimate的文档之后，使用了.ng-enter和.ng-enter-stagger来实现效果。意外的是，页面打开时并没有任何效果……给跪！<br><strong>Demo：</strong> <a href="http://runjs.cn/code/q0cbdhkf" target="_blank" rel="external">页面打开时没有ng-enter的动画</a></p>
+ <a id="more"></a>
+<hr>
+<h3 id="苦苦寻觅"><a href="#苦苦寻觅" class="headerlink" title="苦苦寻觅"></a>苦苦寻觅</h3><p>&emsp;&emsp;想想看可能是加载的太快了，没有加载动画的样式，因此给赋值语句增加了一个$timeout。<br><code>$timeout(function(){$scope.categories = [&#39;12345&#39;, &#39;6789&#39;, &#39;9876&#39;];},0);</code><br>果然是这样，然后Demo就可以显示效果了，但是项目（使用了ui-router，可能有关）中的动画还是一会儿有一会儿没有。不甘心，因此在google上疯狂寻找各种解决方法，很意外的看到了一种解决方法。它使用了这么一句代码：<br><code>$rootElement.data(&quot;$$ngAnimateState&quot;).running = false;</code><br>然而这玩意儿在最新的AngularJS v1.5.x并不能使用，会提示错误，顿时泪流千行 。</p>
+<hr>
+<h3 id="终"><a href="#终" class="headerlink" title="终"></a>终</h3><p>&emsp;&emsp;在Github上有一个回答 <code>&lt;body ng-animate-children=&quot;exp&quot;&gt;&lt;/body&gt;</code>，使用了ng-animate-children指令，能够实现页面在打开后的ng-enter效果。在<a href="https://docs.angularjs.org/api/ngAnimate/directive/ngAnimateChildren" target="_blank" rel="external">AngularJS文档</a>上看到了这个指令，意思是无论父元素是否正在动画，子元素都会发生动画（父元素动画没执行完，子元素动画不执行）。<br>&emsp;&emsp;最后就把$timeout和ng-animate-children都写上了，这样终于在页面打开之后ng-repeat的子元素一个个的加载进来了。</p>
 
       
-        <p class="article-more-link">
-          <a  href="/2016/02/18/AngularJS的ng-enter没有工作/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
+  
+    
   
 </article>
 
@@ -221,11 +222,28 @@
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="AngularJS的ng-enter没有工作" data-title="AngularJS的ng-enter没有工作" data-url="http://moonkin.shenxj.xyz/2016/02/18/AngularJS的ng-enter没有工作/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
-  
-  
+
 </div>
       <footer id="footer">
   <div class="outer">
@@ -249,8 +267,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
